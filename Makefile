@@ -10,7 +10,7 @@ SOURCE_SCRIPT_FILE_PREFIX =
 SOURCE_SCRIPT_FILE_NAME = video.dev
 SOURCE_STYLE_FILE_PREFIX =
 SOURCE_STYLE_FILE_NAME = video-js
-TARGET_STYLE_LESS_CONVERTER = sed "s/url('font/url('@{foundry_uri}\/videojs/g"
+TARGET_STYLE_LESS_CONVERTER = sed "s/url('font/url('@{foundry_uri}\/styles\/videojs/g"
 
 copy-swf:
 	cp ${SOURCE_SCRIPT_FOLDER}/video-js.swf ${TARGET_SCRIPT_FOLDER}/videojs.swf
