@@ -13,7 +13,7 @@ SOURCE_STYLE_FILE_NAME = video-js
 TARGET_STYLE_LESS_CONVERTER = sed "s/url('font/url('@{foundry_uri}\/styles\/videojs/g"
 
 grunt:
-	grunt
+	grunt --force
 
 copy-swf:
 	cp ${SOURCE_SCRIPT_FOLDER}/video-js.swf ${TARGET_SCRIPT_FOLDER}/videojs.swf

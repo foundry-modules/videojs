@@ -95,7 +95,11 @@ vjs.options = {
   // techOrder: ['flash','html5'],
 
   'html5': {},
-  'flash': {},
+  // FOUNDRY_HACK
+  // Construct swf path
+  'flash': {
+    'swf': $.path + '/scripts/videojs/videojs.swf'
+  },
 
   // Default of web browser is 300x150. Should rely on source width/height.
   'width': 300,
@@ -134,9 +138,13 @@ vjs.options = {
 
 // Set CDN Version of swf
 // The added (+) blocks the replace from changing this GENERATED_CDN_VSN string
+/*
+// FOUNDRY_HACK
+// Prevent loading of CDN
 if (vjs.CDN_VERSION !== 'GENERATED'+'_CDN_VSN') {
   videojs.options['flash']['swf'] = vjs.ACCESS_PROTOCOL + 'vjs.zencdn.net/'+vjs.CDN_VERSION+'/video-js.swf';
 }
+*/
 
 /**
  * Utility function for adding languages to the default options. Useful for
