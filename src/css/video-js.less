@@ -213,10 +213,14 @@ fonts to show/hide properly.
   - "\9" IE8 hack didn't work for this
   - Found in XP IE8 from http://modern.ie. Does not show up in "IE8 mode" in IE9
 */
+/*
+FOUNDRY_HACK
+Disable IE8 fixes
 @ie8screen: ~"\0screen";
 .vjs-default-skin.vjs-user-inactive.vjs-playing .vjs-control-bar :before {
   @media @ie8screen { content: ""; }
 }
+*/
 
 /* General styles for individual controls. */
 .vjs-default-skin .vjs-control {
